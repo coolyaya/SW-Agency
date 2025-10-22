@@ -141,7 +141,7 @@ export function CreatorFilters({
           <div className="md:hidden">
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" className="gap-2">
+                <Button variant="outline" className="w-full gap-2 sm:w-auto">
                   <SlidersHorizontal className="h-4 w-4" aria-hidden />
                   Filters
                 </Button>
