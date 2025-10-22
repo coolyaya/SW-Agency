@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Editorial Shoot</title>
+  <defs>
+    <linearGradient id="grad-jane_post2" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A67D8" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="48" fill="url(#grad-jane_post2)" />
+  <circle cx="620" cy="160" r="80" fill="#14B8A6" opacity="0.3" />
+  <circle cx="120" cy="640" r="120" fill="#14B8A6" opacity="0.25" />
+  <text x="64" y="420" font-family="'Inter', 'Helvetica', 'Arial', sans-serif" font-size="72" font-weight="600" fill="#F8FAFC">Editorial Shoot</text>
+  <text x="64" y="500" font-family="'Inter', 'Helvetica', 'Arial', sans-serif" font-size="34" fill="rgba(248,250,252,0.8)">SW Talents</text>
+</svg>

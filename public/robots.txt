@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.sw-entertainment.com
+
+# Sitemaps
+Sitemap: https://www.sw-entertainment.com/sitemap.xml
