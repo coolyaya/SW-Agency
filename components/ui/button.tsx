@@ -8,11 +8,13 @@ import { cn } from "@/lib/utils";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
-  variant?: "default" | "secondary" | "outline" | "ghost" | "link" | "destructive";
+  variant?: "default" | "secondary" | "outline" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
 }
 
-const buttonVariants: Record<ButtonProps["variant"], string> = {
+type Variant = NonNullable<ButtonProps["variant"]>;
+
+const buttonVariants: Record<Variant, string> = {
   default:
     "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
   secondary:
@@ -22,8 +24,6 @@ const buttonVariants: Record<ButtonProps["variant"], string> = {
   ghost:
     "hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
   link: "text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-  destructive:
-    "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
 };
 
 const buttonSizes: Record<NonNullable<ButtonProps["size"]>, string> = {
@@ -37,14 +37,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
-      variant = "default",
-      size = "default",
+      variant: variantProp,
+      size: sizeProp,
       asChild = false,
       ...props
     },
     ref,
   ) => {
     const Comp = asChild ? Slot : "button";
+    const variant: Variant = variantProp ?? "default";
+    const size: NonNullable<ButtonProps["size"]> = sizeProp ?? "default";
+
     return (
       <Comp
         className={cn(
