@@ -1,42 +1,19 @@
-import creators from "@/data/creators.json";
-import { buildQueryFromState, type CreatorFilterState, parseFollowerRange } from "@/lib/filters";
+import creators from "@/data/creators";
+import {
+  buildQueryFromState,
+  type CreatorFilterState,
+  parseFollowerRange,
+} from "@/lib/filters";
+import type { Creator } from "@/types/creator";
 
-export interface CreatorPlatform {
-  name: string;
-  url: string;
-}
-
-export interface CreatorSelectedContent {
-  src: string;
-  poster?: string;
-  href: string;
-}
-
-export interface Creator {
-  slug: string;
-  name: string;
-  avatar: string;
-  platforms: CreatorPlatform[];
-  category: string[];
-  location: string;
-  followers: Record<string, number>;
-  engagementRate: number;
-  email?: string;
-  demographics: {
-    age: [string, number][];
-    gender: [string, number][];
-    countries: [string, number][];
-  };
-  bio: string;
-  recentContent: string[];
-  selectedContent?: CreatorSelectedContent[];
-  brands?: { name: string; logo?: string }[];
-  categoryTags: string[];
-  region: string;
-}
+export type {
+  Creator,
+  CreatorPlatform,
+  CreatorSelectedContent,
+} from "@/types/creator";
 
 export function getCreators(): Creator[] {
-  return creators as Creator[];
+  return creators;
 }
 
 export function getCreatorBySlug(slug: string): Creator | undefined {

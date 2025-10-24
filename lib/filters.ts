@@ -68,9 +68,11 @@ export function parseFollowerRange(range?: string) {
     return { min: 0, max: Number.POSITIVE_INFINITY };
   }
 
+  const max = "max" in matched ? matched.max : Number.POSITIVE_INFINITY;
+
   return {
     min: matched.min,
-    max: matched.max ?? Number.POSITIVE_INFINITY,
+    max,
   };
 }
 

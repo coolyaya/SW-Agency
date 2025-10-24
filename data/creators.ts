@@ -1,4 +1,6 @@
-[
+import type { Creator } from "@/types/creator";
+
+export const creators = [
   {
     "slug": "benny-smellz",
     "name": "Benny $mellz",
@@ -115,12 +117,21 @@
     "region": "North America",
     "followers": { "tiktok": 1266 },
     "engagementRate": 5.1,
-    "demographics": {
-      "age": [["13-17", 8], ["18-24", 50], ["25-34", 30], ["35-44", 9], ["45+", 3]],
-      "gender": [["female", 65], ["male", 35]],
-      "countries": [["US", 60], ["UK", 12], ["CA", 8], ["AU", 5], ["DE", 3]]
+    "metrics": {
+      "range": "Oct 22, 2024 - Oct 21, 2025",
+      "postViews": 487000,
+      "profileViews": 10000,
+      "likes": 50000,
+      "comments": 2395,
+      "shares": 7179,
+      "estimatedRewards": null
     },
-    "likes": 49200,
+    "demographics": {
+      "age": [["18-24", 37.3], ["25-34", 31.9], ["35-44", 17], ["45-54", 8.6], ["55+", 5.2]],
+      "gender": [["male", 89], ["female", 9], ["other", 2]],
+      "countries": [["US", 55.7], ["Other", 25.2], ["CA", 3.7], ["AU", 2.7], ["UK", 2.7], ["RO", 2.2], ["SG", 1.9], ["PL", 1.6], ["AE", 1.5], ["DE", 1.4], ["PH", 1.4]]
+    },
+    "likes": 50000,
     "avatar": "/images/creators/handofragrance.jpg",
     "recentContent": [
       "/images/creators/handofragrance_post1.jpg",
@@ -138,10 +149,17 @@
         "href": "https://www.tiktok.com/@handoffragrance/video/7291111122223333444"
       }
     ],
+    "viewerActivity": {
+      "mostActiveTime": "Tuesday, 5 PM - 6 PM",
+      "peakViewDate": "2025-08-14",
+      "peakViewCount": 5451
+    },
     "brands": [
       { "name": "Ulta Beauty", "logo": "/images/brands/ulta.png" },
       { "name": "Macy's", "logo": "/images/brands/macys.png" },
       { "name": "Bath & Body Works", "logo": "/images/brands/bathandbodyworks.png" }
     ]
   }
-]
+] satisfies Creator[];
+
+export default creators;
