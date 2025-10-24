@@ -169,11 +169,13 @@ export default function CreatorPage({ params }: CreatorPageProps) {
               {creator.brands.map((brand, i) => (
                 <div key={i} className="flex flex-col items-center">
                   {brand.logo ? (
-                    <img
+                    <Image
                       src={brand.logo}
                       alt={brand.name}
                       title={brand.name}
-                      className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition"
+                      width={120}
+                      height={48}
+                      className="h-12 w-auto object-contain opacity-90 transition hover:opacity-100"
                     />
                   ) : (
                     <p className="text-sm text-muted-foreground">{brand.name}</p>

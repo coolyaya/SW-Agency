@@ -10,7 +10,9 @@
       { "name": "beacons", "url": "https://beacons.ai/bennysmellz" }
     ],
     "category": ["fragrance"],
+    "categoryTags": ["fragrance"],
     "location": "US",
+    "region": "North America",
     "followers": { "tiktok": 1874 },
     "engagementRate": 4.2,
     "demographics": {
@@ -58,7 +60,9 @@
       { "name": "linktree", "url": "https://linktr.ee/Benscents" }
     ],
     "category": ["fragrance"],
+    "categoryTags": ["fragrance"],
     "location": "US",
+    "region": "North America",
     "followers": { "tiktok": 17800 },
     "engagementRate": 3.6,
     "demographics": {
@@ -106,7 +110,9 @@
       { "name": "tiktok", "url": "https://www.tiktok.com/@handoffragrance" }
     ],
     "category": ["fragrance"],
+    "categoryTags": ["fragrance"],
     "location": "US",
+    "region": "North America",
     "followers": { "tiktok": 1266 },
     "engagementRate": 5.1,
     "demographics": {
