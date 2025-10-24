@@ -45,7 +45,7 @@ export default function VideoLightbox({
       <DialogTrigger asChild>
         <button className="w-full">{thumb}</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[420px] lg:max-w-[560px] p-0 overflow-hidden">
+      <DialogContent className="w-full max-w-[min(90vw,320px)] sm:max-w-[min(75vw,360px)] lg:max-w-[min(60vw,420px)] p-0 overflow-hidden">
         <div className="bg-black">
           <video
             ref={vidRef}
@@ -54,7 +54,7 @@ export default function VideoLightbox({
             playsInline
             controls
             autoPlay
-            className="w-full h-auto"
+            className="w-full h-auto max-h-[80vh]"
           />
         </div>
         <div className="p-4">

@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Creator roster",
   description:
-    "Browse SW Talents creators by platform, category, region, and follower brackets. Filter to find the right talent for your next campaign.",
+    "Browse SW Creators creators by platform, category, region, and follower brackets. Filter to find the right talent for your next campaign.",
   path: "/creators",
 });
 

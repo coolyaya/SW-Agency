@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t py-6 text-sm text-muted-foreground">
       <div className="container mx-auto flex items-center justify-between">
-        <p>© {new Date().getFullYear()} SW Entertainment</p>
+        <p>© {new Date().getFullYear()} SW Creators</p>
         <div className="flex items-center gap-4">
           <a href="mailto:talent@sw-ent.com" aria-label="Email">
             <Mail className="h-5 w-5" />

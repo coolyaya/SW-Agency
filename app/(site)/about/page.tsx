@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About SW Talents",
+  title: "About SW Creators",
   description:
-    "Learn how SW Talents bridges world-class creators and ambitious brands with strategic partnerships, campaign operations, and talent development.",
+    "Learn how SW Creators bridges world-class creators and ambitious brands with strategic partnerships, campaign operations, and talent development.",
   path: "/about",
 });
 
@@ -71,13 +71,13 @@ export default function AboutPage() {
       <section className="container grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:items-center">
         <div className="space-y-6">
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            About SW Talents
+            About SW Creators
           </span>
           <h1 className="text-4xl font-semibold leading-tight tracking-tight text-balance">
             We represent creators who move culture and help brands activate with clarity, care, and momentum.
           </h1>
           <p className="text-lg text-muted-foreground">
-            SW Talents launched in 2018 to bridge the gap between breakout social talent and marketing teams who needed
+            SW Creators launched in 2018 to bridge the gap between breakout social talent and marketing teams who needed
             more than siloed influencer placements. Our model blends bespoke roster management with an in-house campaign desk
             that can move at the speed of culture.
           </p>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="relative h-80 overflow-hidden rounded-3xl border border-border/70">
           <Image
             src="/images/creators/about-team.svg"
-            alt="SW Talents team collaborating"
+            alt="SW Creators team collaborating"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 40vw"

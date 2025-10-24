@@ -1,6 +1,6 @@
-# SW Talents
+# SW Creators
 
-Production-grade Next.js (App Router) site for the SW Talents social talent agency roster.
+Production-grade Next.js (App Router) site for the SW Creators social talent agency roster.
 
 ## Prerequisites
 

@@ -153,12 +153,17 @@ export const creators = [
       {
         "src": "/videos/handoffragrance-1.mp4",
         "poster": "/images/creators/handofragrance.jpg",
-        "href": "https://www.tiktok.com/@handoffragrance/video/7299999988877766554"
+        "href": "https://www.tiktok.com/@handofragrance/video/7542002346725805342?is_from_webapp=1&sender_device=pc&web_id=7521933820439397896"
       },
       {
         "src": "/videos/handoffragrance-2.mp4",
         "poster": "/images/creators/handofragrance.jpg",
-        "href": "https://www.tiktok.com/@handoffragrance/video/7291111122223333444"
+        "href": "https://www.tiktok.com/@handofragrance/video/7537111629876464926?is_from_webapp=1&sender_device=pc&web_id=7521933820439397896"
+      },
+      {
+        "src": "/videos/handoffragrance-3.mp4",
+        "poster": "/images/creators/handofragrance.jpg",
+        "href": "https://www.tiktok.com/@handofragrance/video/7537879680855117069?is_from_webapp=1&sender_device=pc&web_id=7521933820439397896"
       }
     ],
     "viewerActivity": {

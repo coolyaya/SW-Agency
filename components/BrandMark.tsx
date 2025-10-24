@@ -19,7 +19,7 @@ export function BrandMark({ className, withTagline = false }: BrandMarkProps) {
       <span className="font-semibold uppercase tracking-[0.18em] text-brand group-hover:text-brand/90">
         SW
       </span>
-      <span className="text-lg font-medium text-foreground/90">Entertainment</span>
+      <span className="text-lg font-medium text-foreground/90">Creators</span>
       {withTagline ? (
         <span className="text-xs font-normal uppercase tracking-[0.35em] text-muted-foreground">
           Talent Studio

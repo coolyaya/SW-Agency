@@ -12,7 +12,7 @@ import { getCreators } from "@/lib/creators";
 export const metadata: Metadata = buildPageMetadata({
   title: "Social-first creators for category-leading brands",
   description:
-    "SW Entertainment curates emerging and established TikTok & Instagram creators, matching them with brands ready to launch high-impact campaigns.",
+    "SW Creators curates emerging and established TikTok & Instagram creators, matching them with brands ready to launch high-impact campaigns.",
   path: "/",
 });
 
@@ -32,7 +32,7 @@ export default function HomePage() {
               Premium creators trusted by brands to translate culture into measurable growth.
             </h1>
             <p className="max-w-2xl text-lg text-muted-foreground">
-              SW Entertainment accelerates collaborations between social publishers and marketing
+              SW Creators accelerates collaborations between social publishers and marketing
               teams. We broker authentic creator partnerships, deliver production oversight, and
               report on the impact that matters to your business.
             </p>
@@ -44,7 +44,7 @@ export default function HomePage() {
               </Button>
               <Button size="lg" variant="outline" className="gap-2" asChild>
                 <Link href="mailto:talent@sw-ent.com">
-                  Contact SW Entertainment
+                  Contact SW Creators
                 </Link>
               </Button>
             </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
           <Card className="bg-card text-card-foreground border shadow-lg">
             <CardContent className="space-y-6 p-8">
               <div className="space-y-2">
-                <h2 className="text-xl font-semibold">Why brands choose SW Entertainment</h2>
+                <h2 className="text-xl font-semibold">Why brands choose SW Creators</h2>
                 <p className="text-sm text-muted-foreground">
                   Dedicated campaign strategists and legal, casting, and performance analytics under one partner.
                 </p>
@@ -142,7 +142,7 @@ export default function HomePage() {
             <div className="relative h-48 md:h-full">
               <Image
                 src="/images/creators/hero-grid.svg"
-                alt="Collage of SW Entertainment creators"
+                alt="Collage of SW Creators talent"
                 fill
                 className="rounded-2xl object-cover"
                 sizes="(max-width: 768px) 100vw, 33vw"

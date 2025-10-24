@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "SW Talents",
+  name: "SW Creators",
   description:
-    "SW Talents is a boutique social talent agency representing TikTok and Instagram creators for brands ready to scale cultural impact.",
+    "SW Creators is a boutique social talent agency representing TikTok and Instagram creators for brands ready to scale cultural impact.",
   siteUrl: "https://www.sw-entertainment.com",
   ogImage: "/api/og",
   twitterHandle: "@swentertainment",

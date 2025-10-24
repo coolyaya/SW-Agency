@@ -8,9 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Contact SW Talents",
+  title: "Contact SW Creators",
   description:
-    "Connect with SW Talents to brief a campaign, request a creator shortlist, or inquire about representation.",
+    "Connect with SW Creators to brief a campaign, request a creator shortlist, or inquire about representation.",
   path: "/contact",
 });
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
         <aside className="space-y-6 rounded-3xl border border-border/70 bg-muted/40 p-8">
           <h2 className="text-xl font-semibold tracking-tight">Headquarters</h2>
           <p className="text-sm text-muted-foreground">
-            SW Talents<br />
+            SW Creators<br />
             3104 Poppyseed Court<br />
             Orlando, FL 32826
           </p>

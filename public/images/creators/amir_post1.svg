@@ -11,5 +11,5 @@
   <circle cx="620" cy="160" r="80" fill="#0EA5E9" opacity="0.3" />
   <circle cx="120" cy="640" r="120" fill="#0EA5E9" opacity="0.25" />
   <text x="64" y="420" font-family="'Inter', 'Helvetica', 'Arial', sans-serif" font-size="72" font-weight="600" fill="#F8FAFC">Market Tour</text>
-  <text x="64" y="500" font-family="'Inter', 'Helvetica', 'Arial', sans-serif" font-size="34" fill="rgba(248,250,252,0.8)">SW Talents</text>
+  <text x="64" y="500" font-family="'Inter', 'Helvetica', 'Arial', sans-serif" font-size="34" fill="rgba(248,250,252,0.8)">SW Creators</text>
 </svg>

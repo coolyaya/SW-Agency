@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Policy",
   description:
-    "SW Talents privacy policy covering data collection, cookies, lawful basis, retention, and user rights for talent and brand partners.",
+    "SW Creators privacy policy covering data collection, cookies, lawful basis, retention, and user rights for talent and brand partners.",
   path: "/legal/privacy",
 });
 
@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         <h1>Privacy Policy</h1>
         <p>Effective date: 01 October 2024</p>
         <p>
-          SW Talents (&quot;SW Talents,&quot; &quot;we,&quot; &quot;us&quot;) operates sw-entertainment.com (the
+          SW Creators (&quot;SW Creators,&quot; &quot;we,&quot; &quot;us&quot;) operates sw-entertainment.com (the
           &quot;Site&quot;) to showcase our creator roster and support brand partnerships. This Privacy Policy explains how we
           collect, use, and safeguard personal data.
         </p>
@@ -115,7 +115,7 @@ export default function PrivacyPolicyPage() {
         <h2>10. Contact</h2>
         <p>
           Data Protection Officer<br />
-          SW Talents<br />
+          SW Creators<br />
           [Insert Agency Address]<br />
           swtalents.contact@gmail.com
         </p>

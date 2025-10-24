@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Terms of Service",
   description:
-    "SW Talents Terms of Service outlining use of the site, talent engagements, limitations of liability, and governing law.",
+    "SW Creators Terms of Service outlining use of the site, talent engagements, limitations of liability, and governing law.",
   path: "/legal/terms",
 });
 
@@ -17,7 +17,7 @@ export default function TermsPage() {
         <p>Effective date: 01 October 2024</p>
         <p>
           These Terms of Service (&quot;Terms&quot;) govern your access to and use of sw-entertainment.com (the
-          &quot;Site&quot;) operated by SW Talents (&quot;SW Talents,&quot; &quot;we,&quot; &quot;our&quot;). By
+          &quot;Site&quot;) operated by SW Creators (&quot;SW Creators,&quot; &quot;we,&quot; &quot;our&quot;). By
           accessing the Site, you agree to be bound by these Terms.
         </p>
 
@@ -56,20 +56,20 @@ export default function TermsPage() {
 
         <h2>5. Limitation of liability</h2>
         <p>
-          To the fullest extent permitted by law, SW Talents and its directors, officers, employees, and agents will not
+          To the fullest extent permitted by law, SW Creators and its directors, officers, employees, and agents will not
           be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or
           revenues arising out of your access to or use of the Site.
         </p>
 
         <h2>6. Indemnity</h2>
         <p>
-          You agree to indemnify and hold SW Talents harmless from and against any claims, liabilities, damages, losses,
+          You agree to indemnify and hold SW Creators harmless from and against any claims, liabilities, damages, losses,
           and expenses (including reasonable legal fees) arising from your violation of these Terms or misuse of the Site.
         </p>
 
         <h2>7. Intellectual property</h2>
         <p>
-          The Site and its contents, including text, graphics, logos, and images, are owned by SW Talents or used with
+          The Site and its contents, including text, graphics, logos, and images, are owned by SW Creators or used with
           permission. You may not reproduce, distribute, or create derivative works without prior written consent.
         </p>
 

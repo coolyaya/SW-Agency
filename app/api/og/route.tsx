@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div style={{ maxWidth: 820 }}>
             <p style={{ letterSpacing: "0.45em", fontSize: 18, textTransform: "uppercase", opacity: 0.7 }}>
-              SW Talents
+              SW Creators
             </p>
             <h1 style={{ fontSize: 68, fontWeight: 600, lineHeight: 1.1 }}>{title}</h1>
           </div>
