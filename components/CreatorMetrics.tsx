@@ -34,7 +34,7 @@ export function CreatorMetrics({ creator, showCTA = true, compact = false }: Cre
         <MetricTile
           label="Engagement rate"
           value={`${creator.engagementRate.toFixed(1)}%`}
-          description="90-day trailing average"
+          description="365-day trailing average"
         />
         <MetricTile
           label="Primary region"
@@ -44,7 +44,9 @@ export function CreatorMetrics({ creator, showCTA = true, compact = false }: Cre
         />
       </div>
       <div className="flex flex-wrap items-center gap-2">
-        {creator.platforms.map((platform) => {
+        {creator.platforms
+          .filter((platform) => platform.name.toLowerCase() !== "linktree")
+          .map((platform) => {
           const Icon = platformIcons[platform.name] ?? Globe;
           return (
             <Badge key={platform.name} variant="outline" className="gap-2">

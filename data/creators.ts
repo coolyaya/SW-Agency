@@ -9,14 +9,15 @@ export const creators = [
     "email": "benny-smellz@example.com",
     "platforms": [
       { "name": "tiktok", "url": "https://www.tiktok.com/@thenotoriouss.c.e.n.t" },
+      { "name": "instagram", "url": "https://www.instagram.com/bennysmellz" },
       { "name": "beacons", "url": "https://beacons.ai/bennysmellz" }
     ],
     "category": ["fragrance"],
     "categoryTags": ["fragrance"],
     "location": "US",
     "region": "North America",
-    "followers": { "tiktok": 1874 },
-    "engagementRate": 4.2,
+    "followers": { "tiktok": 1888, "instagram": 56 },
+    "engagementRate": 5.4,
     "demographics": {
       "age": [["13-17", 10], ["18-24", 52], ["25-34", 28], ["35-44", 8], ["45+", 2]],
       "gender": [["female", 58], ["male", 42]],
@@ -59,20 +60,30 @@ export const creators = [
     "email": "ben-scents@example.com",
     "platforms": [
       { "name": "tiktok", "url": "https://www.tiktok.com/@thebenscents" },
+      { "name": "instagram", "url": "https://www.instagram.com/thebenscents" },
       { "name": "linktree", "url": "https://linktr.ee/Benscents" }
     ],
     "category": ["fragrance"],
     "categoryTags": ["fragrance"],
     "location": "US",
     "region": "North America",
-    "followers": { "tiktok": 17800 },
-    "engagementRate": 3.6,
-    "demographics": {
-      "age": [["13-17", 10], ["18-24", 55], ["25-34", 25], ["35-44", 8], ["45+", 2]],
-      "gender": [["female", 60], ["male", 40]],
-      "countries": [["US", 70], ["UK", 10], ["CA", 8], ["AU", 5], ["DE", 3]]
+    "followers": { "tiktok": 18400, "instagram": 4049 },
+    "engagementRate": 6.29,
+    "metrics": {
+      "range": "Oct 22, 2024 - Oct 21, 2025",
+      "postViews": 11000000,
+      "profileViews": 149000,
+      "likes": 660000,
+      "comments": 18000,
+      "shares": 14000,
+      "estimatedRewards": null
     },
-    "likes": 639500,
+    "demographics": {
+      "age": [["18-24", 42.6], ["25-34", 37.5], ["35-44", 12], ["45-54", 5.2], ["55+", 2.7]],
+      "gender": [["male", 90], ["female", 9], ["other", 1]],
+      "countries": [["Other", 41.6], ["US", 23.5], ["CA", 7.1], ["PH", 4.9], ["UK", 4.2]]
+    },
+    "likes": 660000,
     "avatar": "/images/creators/benscents.jpg",
     "recentContent": [
       "/images/creators/benscents_post1.jpg",
@@ -109,14 +120,15 @@ export const creators = [
     "bio": "Fragrance Content Creator sharing scent reviews and education for perfume lovers.",
     "email": "hando-fragrance@example.com",
     "platforms": [
-      { "name": "tiktok", "url": "https://www.tiktok.com/@handoffragrance" }
+      { "name": "tiktok", "url": "https://www.tiktok.com/@handoffragrance" },
+      { "name": "instagram", "url": "https://www.instagram.com/handoffragrance" }
     ],
     "category": ["fragrance"],
     "categoryTags": ["fragrance"],
     "location": "US",
     "region": "North America",
-    "followers": { "tiktok": 1266 },
-    "engagementRate": 5.1,
+    "followers": { "tiktok": 1266, "instagram": 683 },
+    "engagementRate": 14.6,
     "metrics": {
       "range": "Oct 22, 2024 - Oct 21, 2025",
       "postViews": 487000,

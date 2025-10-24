@@ -84,17 +84,17 @@ export default function ContactPage() {
           <h2 className="text-xl font-semibold tracking-tight">Headquarters</h2>
           <p className="text-sm text-muted-foreground">
             SW Talents<br />
-            [Insert Agency Address]<br />
-            New York, NY 10001
+            3104 Poppyseed Court<br />
+            Orlando, FL 32826
           </p>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary" aria-hidden />
-              +1 (212) 555-0198
+              +1 (571) 340-4479
             </p>
             <p>
               Talent availability hours:<br />
-              <strong className="font-medium text-foreground">Monday – Friday, 9am to 6pm ET</strong>
+              <strong className="font-medium text-foreground">Monday – Friday, 10am to 9pm ET</strong>
             </p>
           </div>
         </aside>
