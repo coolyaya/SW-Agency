@@ -14,7 +14,7 @@ export const CATEGORY_OPTIONS = [
   { label: "Fitness", value: "fitness" },
   { label: "Wellness", value: "wellness" },
   { label: "Fashion", value: "fashion" },
-  { label: "Culture", value: "culture" },
+  { label: "Fragrance", value: "fragrance" },
   { label: "Tech", value: "tech" },
   { label: "Gaming", value: "gaming" },
   { label: "Home", value: "home" },
@@ -33,10 +33,13 @@ export const REGION_OPTIONS = [
 
 export const FOLLOWER_RANGES = [
   { label: "Any follower count", value: "all", min: 0 },
-  { label: "Under 500K", value: "0-500k", min: 0, max: 500_000 },
-  { label: "500K - 1M", value: "500k-1m", min: 500_000, max: 1_000_000 },
-  { label: "1M - 2M", value: "1m-2m", min: 1_000_000, max: 2_000_000 },
-  { label: "2M+", value: "2m-plus", min: 2_000_000 },
+  { label: "Under 5K", value: "0-5k", min: 0, max: 5_000 },
+  { label: "5K - 10K", value: "5k-10k", min: 5_000, max: 10_000 },
+  { label: "10K - 20K", value: "10k-20k", min: 10_000, max: 20_000 },
+  { label: "20K - 50K", value: "20k-50k", min: 20_000, max: 50_000 },
+  { label: "50K - 100K", value: "50k-100k", min: 50_000, max: 100_000 },
+  { label: "100K - 200K", value: "100k-200k", min: 100_000, max: 200_000 },
+  { label: "200K+", value: "200k-plus", min: 200_000 },
 ] as const;
 
 export const SORT_OPTIONS = [

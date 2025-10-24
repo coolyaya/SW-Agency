@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto flex items-center justify-between">
         <p>© {new Date().getFullYear()} SW Creators</p>
         <div className="flex items-center gap-4">
-          <a href="mailto:talent@sw-ent.com" aria-label="Email">
+          <a href="mailto:talent@sw-ent.com" aria-label="Email" target="_blank" rel="noreferrer">
             <Mail className="h-5 w-5" />
           </a>
           <a href="https://tiktok.com/@placeholder" aria-label="TikTok">

@@ -65,7 +65,9 @@ function CreatorsList({ creators, state }: { creators: Creator[]; state: Creator
           Showing {creators.length} creator{creators.length === 1 ? "" : "s"}.
         </p>
         <Button variant="ghost" asChild className="gap-2">
-          <Link href="mailto:swtalents.contact@gmail.com">Talk with our partnerships team</Link>
+          <Link href="mailto:swtalents.contact@gmail.com" target="_blank" rel="noreferrer">
+            Talk with our partnerships team
+          </Link>
         </Button>
       </div>
       <div

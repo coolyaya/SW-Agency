@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, Phone, Sparkles } from "lucide-react";
+import { Building2, Clock, Mail, Phone, Sparkles } from "lucide-react";
 
 import { CopyButton } from "@/components/CopyButton";
 import { Button } from "@/components/ui/button";
@@ -53,7 +53,9 @@ export default function ContactPage() {
                 </div>
               </div>
               <Button size="lg" className="w-full" asChild>
-                <Link href={`mailto:${CONTACT_EMAIL}`}>Open mail app</Link>
+                <Link href={`mailto:${CONTACT_EMAIL}`} target="_blank" rel="noreferrer">
+                  Open mail app
+                </Link>
               </Button>
             </CardContent>
           </Card>
@@ -80,21 +82,35 @@ export default function ContactPage() {
             </Card>
           </div>
         </section>
-        <aside className="space-y-6 rounded-3xl border border-border/70 bg-muted/40 p-8">
-          <h2 className="text-xl font-semibold tracking-tight">Headquarters</h2>
-          <p className="text-sm text-muted-foreground">
-            SW Creators<br />
-            3104 Poppyseed Court<br />
-            Orlando, FL 32826
+        <aside className="relative overflow-hidden rounded-3xl border border-primary/40 bg-gradient-to-br from-primary/10 via-background to-background p-8 shadow-lg shadow-primary/20">
+          <div className="pointer-events-none absolute -right-14 -top-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl" aria-hidden />
+          <div className="flex items-center gap-3">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 text-primary">
+              <Building2 className="h-5 w-5" aria-hidden />
+            </span>
+            <h2 className="text-2xl font-semibold tracking-tight">Headquarters</h2>
+          </div>
+          <p className="space-y-1 text-base text-muted-foreground">
+            <span className="block font-medium text-foreground">SW Creators</span>
+            <span className="block">3104 Poppyseed Court</span>
+            <span className="block">Orlando, FL 32826</span>
           </p>
           <div className="space-y-3 text-sm text-muted-foreground">
-            <p className="flex items-center gap-2">
+            <p className="flex items-center gap-2 rounded-2xl border border-primary/20 bg-primary/10 px-4 py-3 text-base text-foreground">
               <Phone className="h-4 w-4 text-primary" aria-hidden />
               +1 (571) 340-4479
             </p>
-            <p>
-              Talent availability hours:<br />
-              <strong className="font-medium text-foreground">Monday – Friday, 10am to 9pm ET</strong>
+            <p className="flex items-start gap-3">
+              <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <Clock className="h-4 w-4" aria-hidden />
+              </span>
+              <span>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                  Talent availability
+                </span>
+                <br />
+                <span className="text-base font-semibold text-foreground">Monday – Friday, 10am to 9pm ET</span>
+              </span>
             </p>
           </div>
         </aside>

@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -68,30 +66,18 @@ const leadership = [
 export default function AboutPage() {
   return (
     <div className="space-y-20 pb-24 pt-16">
-      <section className="container grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:items-center">
-        <div className="space-y-6">
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            About SW Creators
-          </span>
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-balance">
-            We represent creators who move culture and help brands activate with clarity, care, and momentum.
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            SW Creators launched in 2018 to bridge the gap between breakout social talent and marketing teams who needed
-            more than siloed influencer placements. Our model blends bespoke roster management with an in-house campaign desk
-            that can move at the speed of culture.
-          </p>
-        </div>
-        <div className="relative h-80 overflow-hidden rounded-3xl border border-border/70">
-          <Image
-            src="/images/creators/about-team.svg"
-            alt="SW Creators team collaborating"
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            priority
-          />
-        </div>
+      <section className="container space-y-6">
+        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+          About SW Creators
+        </span>
+        <h1 className="text-4xl font-semibold leading-tight tracking-tight text-balance">
+          We represent creators who move culture and help brands activate with clarity, care, and momentum.
+        </h1>
+        <p className="text-lg text-muted-foreground">
+          SW Creators launched in 2018 to bridge the gap between breakout social talent and marketing teams who needed
+          more than siloed influencer placements. Our model blends bespoke roster management with an in-house campaign desk
+          that can move at the speed of culture.
+        </p>
       </section>
 
       <section className="container grid gap-10 lg:grid-cols-2">

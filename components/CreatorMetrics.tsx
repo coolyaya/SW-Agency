@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { Instagram, Mail, Youtube, Globe, MapPin, Camera } from "lucide-react";
+import { Instagram, Youtube, Globe, MapPin, Camera } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Creator } from "@/lib/creators";
 
@@ -18,9 +16,14 @@ interface CreatorMetricsProps {
   creator: Creator;
   showCTA?: boolean;
   compact?: boolean;
+  showBrands?: boolean;
 }
 
-export function CreatorMetrics({ creator, showCTA = true, compact = false }: CreatorMetricsProps) {
+export function CreatorMetrics({
+  creator,
+  compact = false,
+  showBrands = false,
+}: CreatorMetricsProps) {
   const totalFollowers = Object.values(creator.followers).reduce((acc, value) => acc + value, 0);
 
   return (
@@ -45,7 +48,10 @@ export function CreatorMetrics({ creator, showCTA = true, compact = false }: Cre
       </div>
       <div className="flex flex-wrap items-center gap-2">
         {creator.platforms
-          .filter((platform) => platform.name.toLowerCase() !== "linktree")
+          .filter((platform) => {
+            const excludedPlatforms = new Set(["linktree", "beacons"]);
+            return !excludedPlatforms.has(platform.name.toLowerCase());
+          })
           .map((platform) => {
           const Icon = platformIcons[platform.name] ?? Globe;
           return (
@@ -59,18 +65,22 @@ export function CreatorMetrics({ creator, showCTA = true, compact = false }: Cre
           );
         })}
       </div>
-      {showCTA ? (
-        <Button
-          asChild
-          size={compact ? "sm" : "lg"}
-          variant="outline"
-          className="self-start gap-2"
-        >
-          <Link href="mailto:swtalents.contact@gmail.com">
-            <Mail className="h-4 w-4" aria-hidden />
-            Request availability
-          </Link>
-        </Button>
+      {showBrands && creator.brands?.length ? (
+        <div className="rounded-2xl border border-dashed border-border/70 bg-muted/20 p-4">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground text-center">
+            Brands worked with
+          </p>
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-4">
+            {creator.brands.map((brand) => (
+              <span
+                key={brand.name}
+                className="rounded-full border border-border/60 bg-background px-4 py-1.5 text-sm font-semibold text-foreground"
+              >
+                {brand.name}
+              </span>
+            ))}
+          </div>
+        </div>
       ) : null}
     </div>
   );

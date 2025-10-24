@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Star } from "lucide-react";
 
+import AutoPlayVideo from "@/components/AutoPlayVideo";
 import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,7 +18,16 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function HomePage() {
-  const creators = getCreators().slice(0, 4);
+  const allCreators = getCreators();
+  const creators = allCreators.slice(0, 4);
+  const heroVideos = allCreators
+    .flatMap((creator) =>
+      (creator.selectedContent ?? []).map((content) => ({
+        ...content,
+        creatorName: creator.name,
+      })),
+    )
+    .slice(0, 3);
 
   return (
     <div className="space-y-24 pb-24 pt-10 sm:pt-16">
@@ -43,7 +53,7 @@ export default function HomePage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="gap-2" asChild>
-                <Link href="mailto:talent@sw-ent.com">
+                <Link href="mailto:talent@sw-ent.com" target="_blank" rel="noreferrer">
                   Contact SW Creators
                 </Link>
               </Button>
@@ -54,30 +64,59 @@ export default function HomePage() {
               <StatItem label="Global regions" value="12" detail="markets activated in the last year" />
             </dl>
           </div>
-          <Card className="bg-card text-card-foreground border shadow-lg">
-            <CardContent className="space-y-6 p-8">
-              <div className="space-y-2">
-                <h2 className="text-xl font-semibold">Why brands choose SW Creators</h2>
-                <p className="text-sm text-muted-foreground">
-                  Dedicated campaign strategists and legal, casting, and performance analytics under one partner.
-                </p>
+          {heroVideos.length > 0 ? (
+            <div className="relative h-[420px]">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative h-full w-full max-w-[300px]">
+                  {heroVideos.map((video, index) => {
+                    const positionClasses = [
+                      "left-1/2 -translate-x-[95%] rotate-[-8deg] z-10",
+                      "left-1/2 -translate-x-1/2 z-20",
+                      "left-1/2 -translate-x-[5%] rotate-[8deg] z-10",
+                    ];
+
+                    return (
+                      <div
+                        key={`${video.src}-${index}`}
+                        className={`absolute top-1/2 w-full max-w-[220px] -translate-y-1/2 transition-transform ${positionClasses[index] ?? "left-1/2 -translate-x-1/2"}`}
+                      >
+                        <AutoPlayVideo
+                          src={video.src}
+                          poster={video.poster}
+                          className="ring-8 ring-background shadow-2xl"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-              <ul className="space-y-4 text-sm">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden />
-                  Full funnel campaign design, from seeding to always-on ambassador programs.
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden />
-                  360° reporting suite including post-purchase metrics and attribution-ready first-party tracking.
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden />
-                  Talent development support to maintain compliance, creative quality, and audience trust.
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+            </div>
+          ) : (
+            <Card className="bg-card text-card-foreground border shadow-lg">
+              <CardContent className="space-y-6 p-8">
+                <div className="space-y-2">
+                  <h2 className="text-xl font-semibold">Why brands choose SW Creators</h2>
+                  <p className="text-sm text-muted-foreground">
+                    Dedicated campaign strategists and legal, casting, and performance analytics under one partner.
+                  </p>
+                </div>
+                <ul className="space-y-4 text-sm">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden />
+                    Full funnel campaign design, from seeding to always-on ambassador programs.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden />
+                    360° reporting suite including post-purchase metrics and attribution-ready first-party tracking.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-brand" aria-hidden />
+                    Talent development support to maintain compliance, creative quality, and audience trust.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </section>
 
@@ -130,7 +169,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button size="lg" className="gap-2" asChild>
-                  <Link href="mailto:talent@sw-ent.com">
+                  <Link href="mailto:talent@sw-ent.com" target="_blank" rel="noreferrer">
                     Start a campaign <ArrowUpRight className="h-4 w-4" aria-hidden />
                   </Link>
                 </Button>

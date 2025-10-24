@@ -69,7 +69,7 @@ export function CreatorCard({ creator, layout = "grid" }: CreatorCardProps) {
             View full profile
           </Link>
           <Button asChild variant="outline" className="gap-2">
-            <Link href="mailto:swtalents.contact@gmail.com">
+            <Link href="mailto:swtalents.contact@gmail.com" target="_blank" rel="noreferrer">
               Partner Inquiry <ArrowUpRight className="h-4 w-4" />
             </Link>
           </Button>

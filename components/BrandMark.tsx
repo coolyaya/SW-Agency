@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -12,16 +13,23 @@ export function BrandMark({ className, withTagline = false }: BrandMarkProps) {
     <Link
       href="/"
       className={cn(
-        "group inline-flex flex-col leading-none text-left text-xl font-semibold tracking-tight text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "inline-flex flex-col items-start gap-2 text-left text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         className,
       )}
+      aria-label="SW Creators home"
     >
-      <span className="font-semibold uppercase tracking-[0.18em] text-brand group-hover:text-brand/90">
-        SW
-      </span>
-      <span className="text-lg font-medium text-foreground/90">Creators</span>
+      <div className="relative h-12 w-44 overflow-hidden rounded-md">
+        <Image
+          src="/images/sw-creators-logo.png"
+          alt="SW Creators logo"
+          fill
+          sizes="160px"
+          className="origin-left object-cover object-left scale-[1.0]"
+          priority
+        />
+      </div>
       {withTagline ? (
-        <span className="text-xs font-normal uppercase tracking-[0.35em] text-muted-foreground">
+        <span className="text-xs font-medium uppercase tracking-[0.35em] text-muted-foreground">
           Talent Studio
         </span>
       ) : null}

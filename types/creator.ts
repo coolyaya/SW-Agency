@@ -28,11 +28,15 @@ export interface Creator {
   };
   metrics?: {
     range: string;
+    totalViews?: number;
     postViews: number;
     profileViews: number;
     likes: number;
     comments: number;
     shares: number;
+    totalInteractions?: number;
+    activeBuyers?: number;
+    watchTimeHours?: number;
     estimatedRewards: number | null;
   };
   bio: string;

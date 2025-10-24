@@ -6,24 +6,37 @@ export const creators = [
     "name": "Benny $mellz",
     "username": "thenotoriouss.c.e.n.t",
     "bio": "Smelling Stuff & Helping People — creative fragrance influencer sharing scent reviews and positivity.",
-    "email": "benny-smellz@example.com",
+    "email": "BennySmellz@gmail.com",
     "platforms": [
       { "name": "tiktok", "url": "https://www.tiktok.com/@thenotoriouss.c.e.n.t" },
       { "name": "instagram", "url": "https://www.instagram.com/bennysmellz" },
       { "name": "beacons", "url": "https://beacons.ai/bennysmellz" }
     ],
-    "category": ["fragrance"],
+    "category": ["Fragrance"],
     "categoryTags": ["fragrance"],
     "location": "US",
     "region": "North America",
     "followers": { "tiktok": 1888, "instagram": 56 },
-    "engagementRate": 5.4,
-    "demographics": {
-      "age": [["13-17", 10], ["18-24", 52], ["25-34", 28], ["35-44", 8], ["45+", 2]],
-      "gender": [["female", 58], ["male", 42]],
-      "countries": [["US", 65], ["UK", 10], ["CA", 8], ["AU", 5], ["DE", 3]]
+    "engagementRate": 6.7,
+    "metrics": {
+      "range": "Most recent 30 days",
+      "totalViews": 381500,
+      "postViews": 381500,
+      "profileViews": 10000,
+      "likes": 22000,
+      "comments": 2300,
+      "shares": 475,
+      "totalInteractions": 24775,
+      "activeBuyers": 2500,
+      "watchTimeHours": 48.2,
+      "estimatedRewards": null
     },
-    "likes": 21400,
+    "demographics": {
+      "age": [["18-24", 19], ["25-34", 35], ["35-44", 29], ["45-54", 13], ["55+", 4]],
+      "gender": [["male", 90], ["female", 9], ["other", 1]],
+      "countries": [["US", 65], ["Other", 25], ["UK", 4], ["CA", 2.5], ["AU", 1]]
+    },
+    "likes": 22000,
     "avatar": "/images/creators/bennysmellz.jpg",
     "recentContent": [
       "/images/creators/bennysmellz_post1.jpg",
@@ -41,15 +54,17 @@ export const creators = [
         "href": "https://www.tiktok.com/@thenotoriouss.c.e.n.t/video/7548265536686148919?is_from_webapp=1&sender_device=pc&web_id=7551606578912642574"
       },
       {
-        "src": "/videos/bennysmellz-2.mp4",
+        "src": "/videos/bennysmellz-3.mp4",
         "poster": "/images/creators/bennysmellz.jpg",
         "href": "https://www.tiktok.com/@thenotoriouss.c.e.n.t/video/7553178704952724749?is_from_webapp=1&sender_device=pc&web_id=7551606578912642574"
       }
     ],
     "brands": [
-      { "name": "Dior", "logo": "/images/brands/dior.png" },
-      { "name": "Adidas", "logo": "/images/brands/adidas.png" },
-      { "name": "Coca-Cola", "logo": "/images/brands/cocacola.png" }
+      { "name": "Boss" },
+      { "name": "BeautyHouse" },
+      { "name": "LuNiche" },
+      { "name": "Azz El Oud" },
+      { "name": "Aromatix" }
     ]
   },
   {
@@ -57,13 +72,13 @@ export const creators = [
     "name": "Ben Scents",
     "username": "thebenscents",
     "bio": "Join the OG squad before 20k — Fragrance | Cologne | Perfume. Ben Scents launched his creator journey on August 25 this year and quickly grew a dedicated fragrance-lover community.",
-    "email": "ben-scents@example.com",
+    "email": "benscents1@gmail.com",
     "platforms": [
       { "name": "tiktok", "url": "https://www.tiktok.com/@thebenscents" },
       { "name": "instagram", "url": "https://www.instagram.com/thebenscents" },
       { "name": "linktree", "url": "https://linktr.ee/Benscents" }
     ],
-    "category": ["fragrance"],
+    "category": ["Fragrance"],
     "categoryTags": ["fragrance"],
     "location": "US",
     "region": "North America",
@@ -108,9 +123,16 @@ export const creators = [
       
     ],
     "brands": [
-      { "name": "Sephora", "logo": "/images/brands/sephora.png" },
-      { "name": "Nordstrom", "logo": "/images/brands/nordstrom.png" },
-      { "name": "Coach", "logo": "/images/brands/coach.png" }
+      { "name": "YSL" },
+      { "name": "BeautyHouse" },
+      { "name": "Game of Spades" },
+      { "name": "Azzaro" },
+      { "name": "Viktor & Rolf" },
+      { "name": "Prada" },
+      { "name": "Ralph Lauren" },
+      { "name": "Afran" },
+      { "name": "J." },
+      { "name": "Aribiyat" }
     ]
   },
   {
@@ -118,12 +140,12 @@ export const creators = [
     "name": "Hando Fragrance",
     "username": "handoffragrance",
     "bio": "Fragrance Content Creator sharing scent reviews and education for perfume lovers.",
-    "email": "hando-fragrance@example.com",
+    "email": "handofragrancereviews@gmail.com",
     "platforms": [
       { "name": "tiktok", "url": "https://www.tiktok.com/@handoffragrance" },
       { "name": "instagram", "url": "https://www.instagram.com/handoffragrance" }
     ],
-    "category": ["fragrance"],
+    "category": ["Fragrance"],
     "categoryTags": ["fragrance"],
     "location": "US",
     "region": "North America",
@@ -172,9 +194,13 @@ export const creators = [
       "peakViewCount": 5451
     },
     "brands": [
-      { "name": "Ulta Beauty", "logo": "/images/brands/ulta.png" },
-      { "name": "Macy's", "logo": "/images/brands/macys.png" },
-      { "name": "Bath & Body Works", "logo": "/images/brands/bathandbodyworks.png" }
+      { "name": "Viktor & Rolf" },
+      { "name": "Gucci" },
+      { "name": "Boss" },
+      { "name": "Afnan" },
+      { "name": "Armaf" },
+      { "name": "Ex Nihlo" },
+      { "name": "Initio" }
     ]
   }
 ] satisfies Creator[];
