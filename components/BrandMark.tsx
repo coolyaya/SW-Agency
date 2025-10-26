@@ -18,13 +18,13 @@ export function BrandMark({ className, withTagline = false }: BrandMarkProps) {
       )}
       aria-label="SW Creators home"
     >
-      <div className="relative h-12 w-44 overflow-hidden rounded-md">
+      <div className="relative h-9 w-32 overflow-hidden rounded-md sm:h-12 sm:w-44">
         <Image
           src="/images/sw-creators-logo.png"
           alt="SW Creators logo"
           fill
           sizes="160px"
-          className="origin-left object-cover object-left scale-[1.0]"
+          className="origin-left object-cover object-left scale-95 sm:scale-[1.0]"
           priority
         />
       </div>

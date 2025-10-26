@@ -28,7 +28,7 @@ export function CreatorMetrics({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-3 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
         <MetricTile
           label="Total followers"
           value={formatNumber(totalFollowers)}
@@ -95,7 +95,7 @@ interface MetricTileProps {
 
 function MetricTile({ label, value, description, icon }: MetricTileProps) {
   return (
-    <div className="flex flex-col justify-between rounded-xl border bg-muted/30 px-4 py-3 text-center min-w-[110px]">
+    <div className="flex flex-col justify-between rounded-xl border bg-muted/30 px-3 py-3 text-center min-w-0 sm:px-4 sm:min-w-[140px]">
       {icon ? <div className="mx-auto mb-1 text-muted-foreground/70">{icon}</div> : null}
       <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground whitespace-normal leading-tight">
         {label}

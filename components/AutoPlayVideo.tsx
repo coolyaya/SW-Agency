@@ -44,7 +44,7 @@ export default function AutoPlayVideo({
       loop
       autoPlay
       preload="metadata"
-      className={`rounded-xl shadow-sm aspect-[9/16] w-full ${className}`}
+      className={`rounded-md shadow-sm aspect-[9/16] w-full sm:rounded-xl ${className}`}
     />
   );
 }

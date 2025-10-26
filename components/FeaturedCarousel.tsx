@@ -30,12 +30,12 @@ export function FeaturedCarousel({ creators }: FeaturedCarouselProps) {
 
   return (
     <section aria-labelledby="featured-creators" className="relative">
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-5 flex items-center justify-between sm:mb-6">
         <div>
-          <h2 id="featured-creators" className="text-2xl font-semibold tracking-tight">
+          <h2 id="featured-creators" className="text-xl font-semibold tracking-tight sm:text-2xl">
             Creator roster highlights
           </h2>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs text-muted-foreground sm:text-sm">
             A curated snapshot of multi-market creators delivering standout results for leading brands.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function FeaturedCarousel({ creators }: FeaturedCarouselProps) {
             aria-label="Scroll left"
             onClick={() => scrollBy("left")}
           >
-            <ChevronLeft className="h-5 w-5" aria-hidden />
+            <ChevronLeft className="h-4 w-4 md:h-5 md:w-5" aria-hidden />
           </Button>
           <Button
             variant="outline"
@@ -56,26 +56,26 @@ export function FeaturedCarousel({ creators }: FeaturedCarouselProps) {
             aria-label="Scroll right"
             onClick={() => scrollBy("right")}
           >
-            <ChevronRight className="h-5 w-5" aria-hidden />
+            <ChevronRight className="h-4 w-4 md:h-5 md:w-5" aria-hidden />
           </Button>
         </div>
       </div>
       <div
         ref={scrollRef}
-        className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4"
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 sm:gap-6 sm:pb-4"
         role="list"
       >
         {creators.map((creator) => (
           <Card
             key={creator.slug}
             className={cn(
-              "relative flex h-full min-w-[280px] snap-center flex-col overflow-hidden border-border/70 bg-gradient-to-br from-background via-background to-brand/5",
-              "md:min-w-[320px]",
+              "relative flex h-full min-w-[210px] snap-center flex-col overflow-hidden border-border/70 bg-gradient-to-br from-background via-background to-brand/5",
+              "sm:min-w-[260px] md:min-w-[320px]",
             )}
           >
-            <CardHeader className="flex flex-col gap-4 pb-0">
+            <CardHeader className="flex flex-col gap-3 pb-0 sm:gap-4">
               <div className="flex items-center gap-4">
-                <div className="relative h-14 w-14 overflow-hidden rounded-full border border-border/70">
+                <div className="relative h-12 w-12 overflow-hidden rounded-full border border-border/70 sm:h-14 sm:w-14">
                   <Image
                     src={creator.avatar}
                     alt={`${creator.name} avatar`}
@@ -85,7 +85,7 @@ export function FeaturedCarousel({ creators }: FeaturedCarouselProps) {
                   />
                 </div>
                 <div>
-                  <CardTitle className="text-lg">{creator.name}</CardTitle>
+                  <CardTitle className="text-base sm:text-lg">{creator.name}</CardTitle>
                   <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
                     {creator.location}
                   </p>
@@ -99,8 +99,8 @@ export function FeaturedCarousel({ creators }: FeaturedCarouselProps) {
                 ))}
               </div>
             </CardHeader>
-            <CardContent className="flex grow flex-col justify-between gap-3">
-              <p className="text-sm text-muted-foreground">{creator.bio}</p>
+            <CardContent className="flex grow flex-col justify-between gap-2.5 sm:gap-3">
+              <p className="text-xs text-muted-foreground sm:text-sm">{creator.bio}</p>
               <div className="flex items-center justify-between text-sm">
                 <div className="space-y-1">
                   <p className="font-semibold tracking-tight">
@@ -112,7 +112,7 @@ export function FeaturedCarousel({ creators }: FeaturedCarouselProps) {
                 </div>
                 <Button variant="ghost" asChild className="gap-1">
                   <Link href={`/creators/${creator.slug}`}>
-                    View profile <MoveRight className="h-4 w-4" aria-hidden />
+                    View profile <MoveRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
                   </Link>
                 </Button>
               </div>

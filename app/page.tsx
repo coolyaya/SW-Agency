@@ -30,44 +30,44 @@ export default function HomePage() {
     .slice(0, 3);
 
   return (
-    <div className="space-y-24 pb-24 pt-10 sm:pt-16">
+    <div className="space-y-12 pb-16 pt-6 sm:space-y-24 sm:pb-24 sm:pt-16">
       <section className="relative">
-        <div className="container grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:items-center">
-          <div className="space-y-8">
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-brand">
-              <Star className="h-3.5 w-3.5" aria-hidden />
+        <div className="container grid gap-8 sm:gap-12 lg:grid-cols-[1.25fr_1fr] lg:items-center">
+          <div className="space-y-5 sm:space-y-8">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[0.55rem] font-semibold uppercase tracking-[0.35em] text-brand sm:gap-2 sm:px-4 sm:py-2 sm:text-xs">
+              <Star className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5" aria-hidden />
               Social Talent Agency
             </span>
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
+            <h1 className="max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-balance sm:text-5xl">
               Premium creators trusted by brands to translate culture into measurable growth.
             </h1>
-            <p className="max-w-2xl text-lg text-muted-foreground">
+            <p className="max-w-2xl text-sm text-muted-foreground sm:text-lg">
               SW Creators accelerates collaborations between social publishers and marketing
               teams. We broker authentic creator partnerships, deliver production oversight, and
               report on the impact that matters to your business.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" className="gap-2" asChild>
+              <Button size="lg" className="gap-2 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base" asChild>
                 <Link href="/creators">
-                  View creator roster <ArrowUpRight className="h-4 w-4" aria-hidden />
+                  View creator roster <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2" asChild>
+              <Button size="lg" variant="outline" className="gap-2 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base" asChild>
                 <Link href="mailto:talent@sw-ent.com" target="_blank" rel="noreferrer">
                   Contact SW Creators
                 </Link>
               </Button>
             </div>
-            <dl className="grid gap-6 sm:grid-cols-3">
+            <dl className="grid gap-3 sm:grid-cols-3 sm:gap-6">
               <StatItem label="Audience delivered" value="96M+" detail="qualified views in 2023" />
               <StatItem label="Campaign retention" value="87%" detail="brands return quarter over quarter" />
               <StatItem label="Global regions" value="12" detail="markets activated in the last year" />
             </dl>
           </div>
           {heroVideos.length > 0 ? (
-            <div className="relative h-[420px]">
+            <div className="relative h-[300px] sm:h-[420px]">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative h-full w-full max-w-[300px]">
+                <div className="relative h-full w-full max-w-[180px] sm:max-w-[300px]">
                   {heroVideos.map((video, index) => {
                     const positionClasses = [
                       "left-1/2 -translate-x-[95%] rotate-[-8deg] z-10",
@@ -78,12 +78,12 @@ export default function HomePage() {
                     return (
                       <div
                         key={`${video.src}-${index}`}
-                        className={`absolute top-1/2 w-full max-w-[220px] -translate-y-1/2 transition-transform ${positionClasses[index] ?? "left-1/2 -translate-x-1/2"}`}
+                        className={`absolute top-1/2 w-full max-w-[140px] -translate-y-1/2 transition-transform sm:max-w-[220px] ${positionClasses[index] ?? "left-1/2 -translate-x-1/2"}`}
                       >
                         <AutoPlayVideo
                           src={video.src}
                           poster={video.poster}
-                          className="ring-8 ring-background shadow-2xl"
+                          className="ring-3 ring-background shadow-lg sm:ring-8 sm:shadow-2xl"
                         />
                       </div>
                     );
@@ -120,7 +120,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="container space-y-24">
+      <div className="container space-y-20 sm:space-y-24">
         <FeaturedCarousel creators={creators} />
 
         <section aria-labelledby="capabilities" className="grid gap-10 lg:grid-cols-2">
@@ -134,7 +134,7 @@ export default function HomePage() {
               actionable insights.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
             <CapabilityCard
               title="Brand partnerships"
               description="Brief refinement, creator casting, deliverable management, and post-campaign reporting with platform-level benchmarks."
@@ -156,29 +156,29 @@ export default function HomePage() {
 
         <section
           aria-labelledby="cta"
-        className="relative overflow-hidden rounded-3xl border bg-card text-card-foreground shadow-xl px-8 py-12"
+        className="relative overflow-hidden rounded-3xl border bg-card text-card-foreground shadow-xl px-5 py-8 sm:px-8 sm:py-12"
         >
           <div className="grid gap-8 md:grid-cols-[2fr_1fr] md:items-center">
             <div className="space-y-4">
-              <h2 id="cta" className="text-3xl font-semibold tracking-tight text-balance">
+              <h2 id="cta" className="text-xl font-semibold tracking-tight text-balance sm:text-3xl">
                 Ready to build the next social-first launch?
               </h2>
-              <p className="max-w-xl text-sm text-muted-foreground">
+              <p className="max-w-xl text-sm text-muted-foreground sm:text-base">
                 Share your brief with our partnerships desk and we&apos;ll curate a tailored talent shortlist within 48 hours.
                 For creators, we offer representation opportunities by referral—reach out to learn more.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button size="lg" className="gap-2" asChild>
+                <Button size="lg" className="gap-2 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base" asChild>
                   <Link href="mailto:talent@sw-ent.com" target="_blank" rel="noreferrer">
-                    Start a campaign <ArrowUpRight className="h-4 w-4" aria-hidden />
+                    Start a campaign <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base" asChild>
                   <Link href="/about">Learn about our model</Link>
                 </Button>
               </div>
             </div>
-            <div className="relative h-48 md:h-full">
+            <div className="relative h-40 sm:h-48 md:h-full">
               <Image
                 src="/images/creators/hero-grid.svg"
                 alt="Collage of SW Creators talent"
@@ -203,12 +203,12 @@ interface StatItemProps {
 
 function StatItem({ label, value, detail }: StatItemProps) {
   return (
-    <div className="rounded-2xl border bg-card text-card-foreground px-5 py-4 shadow-md hover:shadow-lg transition">
+    <div className="rounded-2xl border bg-card text-card-foreground px-4 py-3 shadow-md hover:shadow-lg transition sm:px-5 sm:py-4">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
         {label}
       </p>
-      <p className="mt-2 text-2xl font-semibold">{value}</p>
-      <p className="text-xs text-muted-foreground">{detail}</p>
+      <p className="mt-2 text-xl font-semibold sm:text-2xl">{value}</p>
+      <p className="text-xs text-muted-foreground sm:text-sm">{detail}</p>
     </div>
   );
 }
@@ -216,9 +216,9 @@ function StatItem({ label, value, detail }: StatItemProps) {
 function CapabilityCard({ title, description }: { title: string; description: string }) {
   return (
     <Card className="h-full bg-card text-card-foreground border shadow-md hover:shadow-lg transition">
-      <CardContent className="space-y-3 p-6">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
+      <CardContent className="space-y-3 p-4 sm:p-6">
+        <h3 className="text-base font-semibold sm:text-lg">{title}</h3>
+        <p className="text-xs text-muted-foreground sm:text-sm">{description}</p>
       </CardContent>
     </Card>
   );
